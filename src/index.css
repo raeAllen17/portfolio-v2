@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+    --color-primary: hsl(var(--primary));
+    --color-card: hsl(var(--card));
+    --color-accent: hsl(var(--accent));
+
+    --font-sans: 'Raleway', sans-serif;
+    --font-serif: 'DM Serif Display', serif;
+}
+
+@layer base {
+
+    html {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+
+    /* Light Mode */
+    :root {
+        --background: 0 0% 93%;
+        --foreground: 0 0% 4%;
+        --card: 0 0% 100%;
+        --primary: 0 0% 16%;
+        --accent: 0, 0%, 85%;
+        --shadow-light-color: 0 0 0 / 10%;
+    }
+
+    /* Dark Mode */
+    .dark {
+        --background: 0 0% 4%;
+        --foreground: 0 0% 95%;
+        --card: 0 0% 10%;
+        --primary: 0 0% 48%;
+        --accent: 0, 0%, 42%;
+        --shadow-light-color: 255, 255, 255, 0.1;
+    }
+
+    h1 {
+        @apply text-7xl md:text-9xl font-serif text-foreground
+    }
+
+    h2 {
+        @apply text-4xl md:text-6xl font-serif text-foreground
+    }
+
+    h3 {
+        @apply font-serif md:text-2xl text-foreground
+    }
+
+    p {
+        @apply font-sans text-foreground
+    }
+
+    a {
+        @apply font-sans text-foreground hover:underline underline-offset-2
+    }
+
+    input, textarea {
+        @apply bg-accent px-3 py-2 text-foreground rounded;
+        resize: none;
+    }
+}
+
+@layer utilities {
+    .section {
+        @apply container px-4 mx-auto py-5 flex flex-col overflow-hidden
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white px-3 py-2 hover:bg-primary/80 transition-colors duration-300 cursor-pointer;
+        font-size: 12px;
+    }
+
+    .btn-secondary {
+        @apply bg-transparent text-foreground border border-foreground px-3 py-2 hover:bg-primary hover:text-white transition-colors duration-300 cursor-pointer;
+        font-size: 12px;
+    }
+
+    .shadow-light {
+        box-shadow: 0px 2px 8px rgba(var(--shadow-light-color));
+    }
+}
