@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter basename='/portfolio-v2/'>
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path='*' element={<NotFound />} />
+          {/* <Route path='*' element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </>
