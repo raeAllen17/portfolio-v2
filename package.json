@@ -1,7 +1,6 @@
 {
   "name": "portfolio-v2",
   "homepage": "https://raeAllen17.github.io/portfolio-v2/",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='/portfolio-v2/'>
+      <BrowserRouter basename='/portfolio-v2'>
         <Routes>
           <Route index element={<HomePage />} />
           {/* <Route path='*' element={<NotFound />} /> */}
